@@ -21,6 +21,7 @@ public class BishopBlack implements Figure {
         throw new ImpossibleMoveException(
                 String.format("Could not way by diagonal from %s to %s", position, dest)
         );
+
     }
 
     public boolean isDiagonal(Cell source, Cell dest) {
