@@ -28,10 +28,16 @@ public class BishopBlackTest {
         assertThat(bishopBlack.way(Cell.F5), is(rsl));
     }
 
+    @Test
+    public void weyLeftUp() {
+        BishopBlack bishopBlack = new BishopBlack(Cell.A1);
+        Cell[] rsl = new Cell[] {Cell.A1, Cell.B2, Cell.C3, Cell.D4};
+        assertThat(bishopBlack.way(Cell.D4), is(rsl));
+    }
+
     @Test(expected = ImpossibleMoveException.class)
     public void weyException() {
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
         bishopBlack.way(Cell.C2);
     }
 }
-// [<E4>, <F3>, <G2>, <H1>]
